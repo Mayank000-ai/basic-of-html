@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Playlist UI - Alen Walker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for playlist and horizontal lists */
+    ::-webkit-scrollbar {
+      height: 7px;
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #2563eb; /* Tailwind blue-600 */
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1e293b; /* Tailwind slate-800 */
+    }
+
+    /* Horizontal scroll container style */
+    .horizontal-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #2563eb #1e293b;
+      -webkit-overflow-scrolling: touch;
+    }
+     </style>
+</head>
+
+<body class="bg-slate-900 text-slate-300 font-sans selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+  <div class="flex flex-1 max-w-7xl mx-auto my-6 p-6 gap-6">
+
+    <!-- Sidebar Playlist -->
+    <aside
+      class="w-72 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-900 rounded-lg shadow-lg flex flex-col overflow-hidden">
+
+      <!-- Playlist Title and Menu -->
+      <div class="p-4 border-b border-slate-700 flex items-center gap-3">
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 19V6a2 2 0 00-2-2H5a2 2 0 000 4h1v7a2 2 0 002 2h3m5 0v-6a2 2 0 00-2-2h-2" />
+ </style>
+</head>
+
+<body class="bg-slate-900 text-slate-300 font-sans selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+  <div class="flex flex-1 max-w-7xl mx-auto my-6 p-6 gap-6">
+
+    <!-- Sidebar Playlist -->
+    <aside
+      class="w-72 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-900 rounded-lg shadow-lg flex flex-col overflow-hidden">
+
+      <!-- Playlist Title and Menu -->
+      <div class="p-4 border-b border-slate-700 flex items-center gap-3">
+        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            
+            d="M9 19V6a2 2 0 00-2-2H5a2 2 0 000 4h1v7a2 2 0 002 2h3m5 0v-6a2 2 0 00-2-2h-2" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19h6"></path>
+        </svg>
+        <h1 class="font-semibold text-lg">Playlist</h1>
+      </div>
+
+      <!-- Playlist menu -->
+      <nav class="p-4 text-slate-400 text-sm space-y-3">
+        <button
+          class="flex items-center gap-2 text-blue-400 font-semibold group hover:text-blue-500 transition-all w-full active">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path
+              d="M3 10h14M3 14h10M14 14v6"></path></svg> Playlist
+        </button>
+ <button class="flex items-center gap-2 hover:text-slate-300 transition-all w-full">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h7"></path></svg> Lost Listening
+        </button>
+        <button class="flex items-center gap-2 hover:text-slate-300 transition-all w-full">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+  d="M12 5v14m7-7H5"></path></svg> Recommended
+        </button>
+      </nav>
+
+      <!-- Song List -->
+      <div class="overflow-y-auto flex-grow">
+        <ul class="divide-y divide-slate-700 text-sm">
+          <!-- Song item -->
+  <li
+            class="flex items-center justify-between px-4 py-3 bg-blue-600 bg-opacity-60 text-white cursor-pointer hover:bg-blue-700 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-blue-300 font-mono min-w-[24px]">01</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/2563eb/ffffff/png?text=On+My+Way"
+                alt="Album cover for On My Way by Alen Walker" onerror="this.style.display='none'" />
+              <div>
+                <p class="font-semibold leading-tight">On My Way</p>
+                <p class="text-xs text-slate-400 leading-tight">Alen Walker</p>
+              </div>
+            </div>
+            <button aria-label="Play On My Way" class="w-7 h-7 rounded-full flex items-center justify-center bg-blue-500 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+            </button>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-blue-600 hover:bg-opacity-40 cursor-pointer transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-500 font-mono min-w-[24px]">02</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/1e40af/ffffff/png?text=Fade"
+                alt="Album cover for Fade by Alen Walker" onerror="this.style.display='none'" />
+              <div>
+                <p class="font-semibold leading-tight">Alen Walker - Fade</p>
+                <p class="text-xs text-slate-400 leading-tight">Alen Walker</p>
+              </div>
+            </div>
+            <button aria-label="Play Fade" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-700 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+ xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+            </button>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-blue-600 hover:bg-opacity-40 cursor-pointer transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-500 font-mono min-w-[24px]">03</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/14b8a6/ffffff/png?text=Caribbean+On+&+On"
+                alt="Album cover for Caribbean On & On by Daniel Levi" onerror="this.style.display='none'" />
+              <div>
+                <p class="font-semibold leading-tight">Caribbean - On & On</p>
+                <p class="text-xs text-slate-400 leading-tight">Daniel Levi</p>
+              </div>
+</div>
+            <button aria-label="Play Caribbean On & On" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-700 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+            </button>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-blue-600 hover:bg-opacity-40 cursor-pointer transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-500 font-mono min-w-[24px]">04</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/c026d3/ffffff/png?text=Moratto"
+                alt="Album cover for Wanyyo - Moratto" onerror="this.style.display='none'" />
+              <div>
+
+  <p class="font-semibold leading-tight">Wanyyo - Moratto</p>
+                <p class="text-xs text-slate-400 leading-tight">Moratto</p>
+              </div>
+            </div>
+            <button aria-label="Play Wanyyo - Moratto" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-700 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+            </button>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-blue-600 hover:bg-opacity-40 cursor-pointer transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-500 font-mono min-w-[24px]">05</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/ea580c/ffffff/png?text=Estrugril"
+                alt="Album cover for Estrugril Geel" onerror="this.style.display='none'" />
+              <div>
+                <p class="font-semibold leading-tight">Estrugril Geel</p>
+                <p class="text-xs text-slate-400 leading-tight">Estrugril</p>
+              </div>
+            </div>
+            <button aria-label="Play Estrugril Geel" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-700 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+
+                  </button>
+          </li>
+
+          <li class="flex items-center justify-between px-4 py-3 hover:bg-blue-600 hover:bg-opacity-40 cursor-pointer transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-500 font-mono min-w-[24px]">06</span>
+              <img class="w-12 h-12 rounded-md object-cover flex-shrink-0"
+                src="https://placehold.co/64x64/2563eb/ffffff/png?text=Electro"
+                alt="Album cover for Electro Music" onerror="this.style.display='none'" />
+              <div>
+                <p class="font-semibold leading-tight">Electronic Music</p>
+                <p class="text-xs text-slate-400 leading-tight">Electro</p>
+              </div>
+
+               </div>
+            <button aria-label="Play Electronic Music" class="w-7 h-7 rounded-full flex items-center justify-center bg-slate-700 hover:bg-blue-700 transition">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path></svg>
+            </button>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Currently playing song summary at bottom -->
+      <div class="p-4 bg-slate-800 border-t border-slate-700 flex items-center gap-4">
+        <img src="https://placehold.co/48x48/2563eb/ffffff/png?text=On+My+Way" alt="On My Way album cover"
+          class="w-12 h-12 rounded-md object-cover flex-shrink-0" onerror="this.style.display='none'" />
+        <div>
+          <p class="font-semibold text-white">On My Way</p>
+          <p class="text-xs text-slate-400">Alen Walker</p>
+        </div>
+        <button aria-label="Pause"
+          class="ml-auto w-8 h-8 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="6" y="5" width="4" height="14" rx="1" ry="1"></rect>
+            <rect x="14" y="5" width="4" height="14" rx="1" ry="1"></rect>
+          </svg>
+        </button>
+      </div>
+    </aside>
+      <!-- Main Content -->
+    <main class="flex-1 flex flex-col">
+
+      <!-- Navigation and Search -->
+      <header class="flex items-center justify-between border-b border-slate-700 pb-3 mb-4 text-sm text-slate-400">
+        <nav class="flex gap-8">
+          <button class="text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">Discover</button>
+          <button class="hover:text-blue-500 transition">My Library</button>
+          <button class="hover:text-blue-500 transition">Radio</button>
+        </nav>
+        <div class="flex items-center gap-4">
+          <div class="relative text-slate-400 group">
+            <input type="text" placeholder="Search"
+              class="bg-slate-800 rounded-md border border-slate-700 px-3 py-1 focus:outline-none focus:border-blue-500 transition pr-8 text-sm" />
+            <svg class="w-5 h-5 absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke-linecap="round" stroke-linejoin="round"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-linecap="round" stroke-linejoin="round"></line>
+            </svg>
+          </div>
+  <div class="flex items-center gap-2">
+            <span class="text-sm font-semibold">KDS CODER JAHID IMRAN</span>
+            <div title="User avatar"
+              class="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-white text-xs select-none cursor-default">
+              KI
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Artist Section -->
+      <section class="flex flex-col md:flex-row gap-8 items-center md:items-start m-4">
+
+        <div class="flex-shrink-0 w-60 h-60 bg-gradient-to-br from-blue-700 to-blue-900 rounded-xl shadow-lg overflow-hidden">
+          <img src="https://placehold.co/240x240/1e40af/ffffff/png?text=Masked+DJ" alt="Photo of a prominent DJ artist wearing a black mask and dark clothing, moody lighting" 
+            class="object-cover w-full h-full" onerror="this.style.display='none'" />
+        </div>
+
+        <div class="flex-1 max-w-3xl">
+          <h2 class="text-3xl text-white font-extrabold mb-2">Alen Walker - Fade</h2>
+          <p class="mb-4 text-slate-400 leading-normal">
+            You were the shadows to my light Did you feel us? Another start you fade Away afraid our aim is out of sight? Wanna see us Alive.
+          </p>
+          <div class="flex items-center gap-4 mb-6">
+            <button class="bg-blue-600 hover:bg-blue-700 transition rounded-full px-8 py-2 text-white font-semibold shadow-lg shadow-blue-700/50">
+              PLAY
+            </button>
+            <button
+      class="rounded-full border border-blue-600 text-blue-400 hover:border-blue-500 hover:text-blue-500 px-7 py-2 font-semibold transition shadow-sm">
+              FOLLOW
+            </button>
+          </div>
+
+          <!-- Horizontal scroll Popular Songs -->
+          <div>
+            <h3 class="text-white font-semibold mb-3">Popular Song</h3>
+            <div class="flex gap-5 overflow-x-auto horizontal-scroll pb-3">
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/ffc107/000000/png?text=Agami+From+South+Indie" alt="Album cover showing a bright, warm color portrait with a couple - Agami From South Indie by Tomashso" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Agami From South Indie">Agami From South Indie</p>
+                <p class="text-[10px] text-slate-500 truncate">Tomashso</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f9a8d4/000000/png?text=Demo+Sad" alt="Album cover with soft blurred portrait of woman with flowers - Demo Sad by Neha Kakkar" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Demo Sad">Demo Sad</p>
+                <p class="text-[10px] text-slate-500 truncate">Neha Kakkar</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f87171/000000/png?text=DILBAR" alt="Album cover featuring vibrant colors with a dancing figure - DILBAR by Satyamawa jayote"
+
+                   class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="DILBAR">DILBAR</p>
+                <p class="text-[10px] text-slate-500 truncate">Satyamawa Jayote</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/6ee7b7/000000/png?text=Sanju+Luka+Chuppi" alt="Album cover showing a couple close embrace, warm colors - Sanju by Luka Chuppi" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Sanju">Sanju</p>
+                <p class="text-[10px] text-slate-500 truncate">Luka Chuppi</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f472b6/000000/png?text=Street+Dancer+3D" alt="Bright colorful dance movie poster - nagar Ladkara 3D Street Dancer 3D" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+            </div>
+
+        <div class="flex-1 max-w-3xl">
+          <h2 class="text-3xl text-white font-extrabold mb-2">Alen Walker - Fade</h2>
+          <p class="mb-4 text-slate-400 leading-normal">
+            You were the shadows to my light Did you feel us? Another start you fade Away afraid our aim is out of sight? Wanna see us Alive.
+          </p>
+          <div class="flex items-center gap-4 mb-6">
+            <button class="bg-blue-600 hover:bg-blue-700 transition rounded-full px-8 py-2 text-white font-semibold shadow-lg shadow-blue-700/50">
+              PLAY
+            </button>
+            <button
+              class="rounded-full border border-blue-600 text-blue-400 hover:border-blue-500 hover:text-blue-500 px-7 py-2 font-semibold transition shadow-sm">
+              FOLLOW
+            </button>
+          </div>
+
+  <!-- Horizontal scroll Popular Songs -->
+          <div>
+            <h3 class="text-white font-semibold mb-3">Popular Song</h3>
+            <div class="flex gap-5 overflow-x-auto horizontal-scroll pb-3">
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/ffc107/000000/png?text=Agami+From+South+Indie" alt="Album cover showing a bright, warm color portrait with a couple - Agami From South Indie by Tomashso" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Agami From South Indie">Agami From South Indie</p>
+                <p class="text-[10px] text-slate-500 truncate">Tomashso</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f9a8d4/000000/png?text=Demo+Sad" alt="Album cover with soft blurred portrait of woman with flowers - Demo Sad by Neha Kakkar" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Demo Sad">Demo Sad</p>
+                <p class="text-[10px] text-slate-500 truncate">Neha Kakkar</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f87171/000000/png?text=DILBAR" alt="Album cover featuring vibrant colors with a dancing figure - DILBAR by Satyamawa Jayote" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="DILBAR">DILBAR</p>
+                <p class="text-[10px] text-slate-500 truncate">Satyamawa Jayote</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/6ee7b7/000000/png?text=Sanju+Luka+Chuppi" alt="Album cover showing a couple close embrace, warm colors - Sanju by Luka Chuppi" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Sanju">Sanju</p>
+       <p class="text-[10px] text-slate-500 truncate">Luka Chuppi</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f472b6/000000/png?text=Street+Dancer+3D" alt="Bright colorful dance movie poster - nagar Ladkara 3D Street Dancer 3D" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Street Dancer 3D">Street Dancer 3D</p>
+                <p class="text-[10px] text-slate-500 truncate">Nagar Ladkara 3D</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/fbbf24/000000/png?text=Puri+Jatt+Do" alt="Album cover with happy people in celebration - Puri Jatt Do" 
+                  class="rounded-lg shadow-md object-cover max-w-full" onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Puri Jatt Do">Puri Jatt Do</p>
+                <p class="text-[10px] text-slate-500 truncate">Puri Jatt Do</p>
+              </div>
+              <div class="flex-shrink-0 w-28 cursor-pointer hover:scale-105 transition-transform">
+                <img src="https://placehold.co/112x112/f87171/000000/png?text=Boond+Achan" alt="Moody artist portrait and guitar - Boond Achan by Arif Anlam" 
+                  class="rounded-lg shadow-md object-cover max-w-full"
+        onerror="this.style.display='none'" />
+                <p class="text-xs mt-1 text-slate-300 truncate" title="Boond Achan">Boond Achan</p>
+                <p class="text-[10px] text-slate-500 truncate">Arif Anlam</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal scroll Popular Artists -->
+          <div class="mt-8">
+            <h3 class="text-white font-semibold mb-3">Popular Artists</h3>
+            <div class="flex gap-4 overflow-x-auto horizontal-scroll rounded-full pb-2">
+              <img src="https://placehold.co/64x64/2563eb/ffffff/png?text=A" alt="Popular artist: Alen Walker" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/1e40af/ffffff/png?text=DJ" alt="Popular artist wearing mask, popular DJ" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/2563eb/ffffff/png?text=N" alt="Popular artist female with head tilted" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/fbbf24/000000/png?text=V" alt="Popular artist silhouette with bright sun behind" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/c026d3/ffffff/png?text=R" alt="Popular male artist with dark hair" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/f87171/000000/png?text=Y" alt="Popular female artist with pink hair" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+              <img src="https://placehold.co/64x64/fbbf24/000000/png?text=K" alt="Popular hip hop artist with baseball hat" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+            <img src="https://placehold.co/64x64/2563eb/ffffff/png?text=J" alt="Popular artist wearing sunglasses" class="w-16 h-16 rounded-full object-cover cursor-pointer hover:ring-2 hover:ring-blue-500 transition" />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+   <!-- Player bottom bar -->
+      <footer
+        class="border-t border-slate-700 p-4 bg-gradient-to-t from-slate-800 via-slate-900 to-transparent flex items-center gap-6">
+
+        <button aria-label="Previous"
+          class="p-2 rounded-full hover:bg-blue-600 hover:text-white transition text-slate-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        <button aria-label="Play/Pause"
+          class="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-700/40 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v18l15-9-15-9z"></path>
+          </svg>
+        </button>
+
+        <button aria-label="Next"
+          class="p-2 rounded-full hover:bg-blue-600 hover:text-white transition text-slate-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+        <div class="flex-1">
+          <input type="range" min="0" max="100" value="22" class="w-full h-1 rounded-lg accent-blue-600" />
+          <div class="text-xs flex justify-between text-slate-400 mt-1">
+            <span>1:22</span>
+            <span>3:36</span>
+          </div>
+        </div>
+
+        <button aria-label="Volume"
+          class="p-2 rounded-full hover:bg-blue-600 hover:text-white transition text-slate-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11 5 L6 9 H3 v6 h3 l5 4 z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round"
+   <path stroke-linecap="round" stroke-linejoin="round"
+              d="M18 9.5a7 7 0 0 1 0 5"></path>
+          </svg>
+        </button>
+
+        <input type="range" min="0" max="100" value="45" class="w-20 h-1 rounded-lg accent-blue-600" />
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>

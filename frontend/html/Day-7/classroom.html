@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLassroom clone-tailwind css</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col h-screen border-b-2">
+    <div class="p-4 border-b">
+      <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-green-600 rounded flex items-center justify-center text-white font-semibold">C</div>
+          <h1 class="text-xl font-semibold">Classroom</h1>
+        </div>
+      </div>
+
+  <div class="flex flex-1 border-b">
+    <div class="w-[30%] flex flex-col justify-between border-b">
+    
+        <ul class="p-4 flex flex-col gap-6 text-sm font-bold">
+          <li><i class="fa-solid fa-house"></i>Home</li>
+          <li><i class="fa-solid fa-calendar"></i>Calendar</li>
+          
+          <li><i class="fa-solid fa-hat-cowboy"></i>Enrolled &dtri;</li>
+          <li><i class="fa-solid fa-list-check"></i>To-do</li>
+
+          <div class="flex items-center gap-3">
+          <div class="w-8 h-8 items-center justify-center rounded flex text-green-700 bg-green-200 rounded"> J</div>
+          <div class="font-bold ">Java batch-A2</div>
+        </div>
+        <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3">
+          <div class="w-8 h-8 items-center justify-center rounded flex text-blue-700 bg-blue-200 rounded"> F</div>
+          <div class="font-bold ">Frontend-G/H</div>
+        </div> 
+    </div>
+    <li><i class="fa-solid fa-box-archive"></i>Archived</li>
+    <li><i class="fa-solid fa-gear"></i>Setting</li>
+
+  </div>
+   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-gray-700 to-gray-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">JAVA BATCH - A2</h3>
+              <div class="text-xs opacity-90">REGex Software</div>
+            </div>
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-600 font-bold border-4 border-white avatar-overlap">R</div>
+            </div>
+          </div>
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/></svg>
+              Classwork
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+  
+</body> 
+</html>

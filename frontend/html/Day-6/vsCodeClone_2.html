@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-700 h-screen flex flex-col border-b-2">
+    <div class="bg-slate-800 text-white text-sm p-5 flex gap-6">
+    <div class="cursor-pointer">File</div>
+    <div class="cursor-pointer">Edit</div>
+    <div class="cursor-pointer">Selection</div>
+    <div class="cursor-pointer">View</div>
+    <div class="cursor-pointer">Go</div>
+    <div class="cursor-pointer">Run</div>
+    <div class="cursor-pointer">Terminal</div>
+    <div class="cursor-pointer"><i class="fa-solid fa-ellipsis"></i></div>
+    <div><i class="fa-solid fa-arrow-left"></i> 
+      <i class="fa-solid fa-arrow-right"></i></div>
+  </div>
+  <div class="flex flex-1">
+
+    <div class="bg-slate-800 w-[5%] flex flex-col justify-between">
+      <div>
+        <ul class="p-4 flex flex-col gap-6 text-xl">
+           <li><i class="text-white fa-solid fa-file"></i></li>
+          <li><i class="text-white fa-solid fa-search"></i></li>
+          <li><i class="text-white fa-brands fa-github"></i></li>
+          <li><i class="text-white fa-brands fa-python"></i></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="p-4 flex flex-col gap-6 text-xl">
+          <li><i class="text-white fa-solid fa-gear"></i></li>
+          <li><i class="text-white fa-regular fa-user-circle"></i></li>
+        </ul>
+      </div>
+    </div>
+     <div class="bg-slate-700 w-[20%] flex flex-col">
+      <div class="flex p-3 text-white justify-between">
+        <div class="font-semibold">EXPLORER</div>
+        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+
+      </div>
+      <div class="flex-1">
+        <ul class="text-white text-sm">
+          <li class="p-3 hover:bg-slate-600 cursor-pointer gap-2"> <span class="text-sm">&gt;</span><i class="fa-solid fa-folder"></i> Day01</li>
+          <li class="p-3 hover:bg-slate-600 cursor-pointer gap-2"> <span class="text-sm">&gt;</span><i class="fa-solid fa-folder"></i> Day02</li>
+          <li class="p-3 hover:bg-slate-600 cursor-pointer gap-2"> <span class="text-2xl">&dtri;</span><i class="fa-solid fa-folder"></i> Day03
+            <ul class="text-white text-s">
+              <li class="p-4 hover bg-slate-600 cursor-pointer gap-2"><i class="fa-brands fa-html5"></i>index.html</li>
+            </ul>
+          </li>
+        </ul>
+        </div>
+        <div class="border-t border-slate-600">
+        <ul class="text-white text-sm">
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-circle-dot"></i> Outline
+          </li>
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-clock"></i> Timeline
+          </li>
+        </ul>
+      </div>
+      </div>
+       <div class="bg-slate-900 flex-1 flex flex-col">
+      <!-- Tabs -->
+      <div class="flex bg-slate-800 border-b border-slate-700 text-sm">
+        <button class="p-3 flex items-center gap-2 bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> index.html
+        </button>
+        <button class="p-3 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file.html
+        </button>
+        <button class="p-3 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file2.html
+        </button>
+        <button class="p-3 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file3.html
+        </button>
+        
+      </div>
+      <div class="flex-1 p-4 font-mono text-sm text-white">
+        1 &nbsp; &lt;!DOCTYPE html&gt;<br>
+        2 &nbsp; &lt;html lang="en"&gt;<br>
+        3 &nbsp; &lt;head&gt;<br>
+        4 &nbsp; &nbsp;&lt;meta charset="UTF-8"&gt;<br>
+        5 &nbsp; &nbsp;&lt;title&gt;VS Code Clone&lt;/title&gt;<br>
+        6 &nbsp; &lt;/head&gt;<br>
+        7 &nbsp; &lt;body&gt;<br>
+        8 &nbsp; &nbsp;&lt;h1&gt;Hello VS Code&lt;/h1&gt;<br>
+        9 &nbsp; &lt;/body&gt;<br>
+        10 &nbsp; &lt;/html&gt;
+      </div>
+      <div class="bg-slate-600 text-white text-s p-3 flex justify-between items-center">
+        <div class="flex gap-4">
+          <span>Ln 1, Col 1</span>
+          <span>Spaces: 4</span>
+          <span>UTF-8</span>
+          <span>{ }</span>
+          <span>HTML</span>
+        </div>
+        <div class="flex gap-4">
+          <span>Port: 3000</span>
+          <span>Go Live</span>
+        </div>
+     </div>
+
+  </div>
+    
+</body>
+</html>

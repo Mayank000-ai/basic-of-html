@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Clone - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-gray-900 text-gray-200 flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col">
+    <div class="p-3 text-sm font-bold text-gray-300 border-b border-gray-700">
+      EXPLORER
+    </div>
+    <div class="p-3 flex-1 overflow-y-auto text-sm">
+      <p class="text-gray-400">FRONTENDG</p>
+      <ul class="ml-4 mt-2 space-y-1">
+        <li>📂 ASSIGNMENT</li>
+        <li class="ml-4">📄 index.html</li>
+        <li class="ml-4">📄 index2.html</li>
+      </ul>
+      <p class="text-gray-400 mt-4">ASSIGNMENT</p>
+      <ul class="ml-4 mt-2 space-y-1">
+        <li>📂 DAY01</li>
+        <li>📂 DAY02</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col">
+
+    <!-- Tabs -->
+    <div class="flex bg-gray-800 border-b border-gray-700 text-sm">
+      <button class="px-4 py-2 bg-gray-900 border-r border-gray-700 text-blue-400">
+        index.html <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="px-4 py-2 border-r border-gray-700 hover:bg-gray-700">
+        index2.html
+      </button>
+      <button class="px-4 py-2 border-r border-gray-700 hover:bg-gray-700">
+        index3.html
+      </button>
+    </div>
+
+    <!-- Editor -->
+    <div class="flex-1 grid grid-cols-2">
+      
+      <!-- Static Preview -->
+      <div class="p-4 border-r border-gray-700">
+        <h2 class="text-green-400 text-xs mb-2">Static Preview</h2>
+        <pre class="bg-gray-900 p-3 rounded-lg text-sm overflow-x-auto">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, VS Code Clone!&lt;/h1&gt;
+  &lt;p&gt;This is a demo code snippet.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      </div>
+
+      <!-- Editable HTML -->
+      <div class="p-4">
+        <h2 class="text-green-400 text-xs mb-2">Editable HTML</h2>
+        <pre class="bg-gray-900 p-3 rounded-lg text-sm overflow-x-auto">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;My Project&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Editable Section&lt;/h1&gt;
+  &lt;p&gt;Type here to simulate real editor behavior.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

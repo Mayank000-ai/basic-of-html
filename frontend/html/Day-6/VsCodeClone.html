@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind-css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+   <body>
+      <div class="bg-slate-900 min-h-[90vh] flex">
+        <div  class="bg-slate-900 flex  flex cols"></div>
+        <div class="bg-slate-700  min-h-[90vh] w-5/100 flex flex-col justify-between">
+            <div>
+                <ul class="p-5 flex flex-col gap-10 text-xl">
+                  <li><i class=" text-white  fa-solid fa-file"></i></li>
+                  <li><i class="text-white  fa-solid fa-search"></i></li>
+                   <li><i class=" text-white  fa-brands fa-github"></i></li>
+                   <li><i class="text-white fa-brands fa-python"></i></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="p-5 flex flex-col gap-10 text-xl">
+                   <li><i class=" text-white fa-solid fa-gear"></i></li>
+                   <li><i class=" text-white far fa-user-circle"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-slate-600 min-h-[90vh] w-25/100">
+            <div class="flex justify-between p-3 text-white">
+            <div>Explorer</div>
+            <div>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            </div>
+            <div class="p-3 flex flex cols min-h-[90vh] justify-between">
+                <ul class="text-white">
+                    <li class="bg-slate-500 cursor-pointer p-2">>
+                        <i class="fa-solid fa-folder text-white"></i>Day01</li>
+                    <li class="bg-slate-500 cursor-pointer ">><i class="fa-solid fa-folder text-white"></i>Day02</li>
+                    <li class="bg-slate-500 cursor-pointer p-2">><i class="fa-solid fa-folder text-white"></i>Day03</li>
+                </ul>
+            </div>
+             <div class="p-3">
+                <ul class="text-white">
+                    <li class="hover:bg-slate-500 cursor-pointer p-2">><i class="fa-solid fa-folder text-white"></i>Outline</li>
+                    <li>><i class="fa-solid fa-folder text-white"></i>Timeline</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-slate-700 min-h-[90vh]  w-70/100"></div>
+      </div>
+   </body>
+</html>

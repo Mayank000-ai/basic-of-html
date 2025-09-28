@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Clone - Tailwind</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 h-screen flex flex-col">
+
+  <!-- TOP BAR (optional like VS Code menu) -->
+  <div class="bg-slate-800 text-white text-sm px-4 py-1 flex gap-6">
+    <span class="cursor-pointer">File</span>
+    <span class="cursor-pointer">Edit</span>
+    <span class="cursor-pointer">Selection</span>
+    <span class="cursor-pointer">View</span>
+    <span class="cursor-pointer">Go</span>
+    <span class="cursor-pointer">Run</span>
+    <span class="cursor-pointer">Terminal</span>
+    <span class="cursor-pointer">Help</span>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="flex flex-1">
+
+    <!-- ACTIVITY BAR -->
+    <div class="bg-slate-800 w-[5%] flex flex-col justify-between">
+      <div>
+        <ul class="p-4 flex flex-col gap-6 text-xl">
+          <li><i class="text-white fa-solid fa-file"></i></li>
+          <li><i class="text-white fa-solid fa-search"></i></li>
+          <li><i class="text-white fa-brands fa-github"></i></li>
+          <li><i class="text-white fa-brands fa-python"></i></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="p-4 flex flex-col gap-6 text-xl">
+          <li><i class="text-white fa-solid fa-gear"></i></li>
+          <li><i class="text-white fa-regular fa-user-circle"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EXPLORER SIDEBAR -->
+    <div class="bg-slate-700 w-[20%] flex flex-col">
+      <!-- Explorer Header -->
+      <div class="flex justify-between items-center px-4 py-2 text-white text-sm border-b border-slate-600">
+        <span class="font-semibold">EXPLORER</span>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
+      <!-- Folder Structure -->
+      <div class="flex-1 overflow-y-auto">
+        <ul class="text-white text-sm">
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-folder"></i> Day01
+          </li>
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-folder"></i> Day02
+          </li>
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-folder"></i> Day03
+          </li>
+        </ul>
+      </div>
+      <!-- Bottom -->
+      <div class="border-t border-slate-600">
+        <ul class="text-white text-sm">
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-circle-dot"></i> Outline
+          </li>
+          <li class="px-4 py-2 hover:bg-slate-600 cursor-pointer flex items-center gap-2">
+            <span>&gt;</span> <i class="fa-solid fa-clock"></i> Timeline
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAIN EDITOR -->
+    <div class="bg-slate-900 flex-1 flex flex-col">
+      <!-- Tabs -->
+      <div class="flex bg-slate-800 border-b border-slate-700 text-sm">
+        <button class="px-4 py-2 flex items-center gap-2 bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> VsCodeClone.html
+        </button>
+        <button class="px-4 py-2 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file.html
+        </button>
+        <button class="px-4 py-2 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file2.html
+        </button>
+        <button class="px-4 py-2 flex items-center gap-2 hover:bg-slate-700 text-white">
+          <i class="fa-brands fa-html5"></i> file3.html
+        </button>
+      </div>
+      <!-- Code Editor -->
+      <div class="flex-1 p-4 font-mono text-sm text-white">
+        1 &nbsp; &lt;!DOCTYPE html&gt;<br>
+        2 &nbsp; &lt;html lang="en"&gt;<br>
+        3 &nbsp; &lt;head&gt;<br>
+        4 &nbsp; &nbsp;&lt;meta charset="UTF-8"&gt;<br>
+        5 &nbsp; &nbsp;&lt;title&gt;VS Code Clone&lt;/title&gt;<br>
+        6 &nbsp; &lt;/head&gt;<br>
+        7 &nbsp; &lt;body&gt;<br>
+        8 &nbsp; &nbsp;&lt;h1&gt;Hello VS Code&lt;/h1&gt;<br>
+        9 &nbsp; &lt;/body&gt;<br>
+        10 &nbsp; &lt;/html&gt;
+      </div>
+      <!-- Status Bar -->
+      <div class="bg-blue-600 text-white text-xs px-4 py-1 flex justify-between items-center">
+        <div class="flex gap-4">
+          <span>Ln 1, Col 1</span>
+          <span>Spaces: 4</span>
+          <span>UTF-8</span>
+          <span>{ }</span>
+          <span>HTML</span>
+        </div>
+        <div class="flex gap-4">
+          <span>Port: 3000</span>
+          <span>Go Live</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

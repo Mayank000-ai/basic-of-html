@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify Clone — Homepage (Laptop)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#121212] text-gray-200 font-sans">
+  <div class="min-h-screen flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-black/60 backdrop-blur-md p-6 flex flex-col gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-300 rounded-full flex items-center justify-center font-bold text-black">S</div>
+        <h1 class="text-white text-2xl font-semibold">Spoty</h1>
+      </div>
+
+      <nav class="flex-1">
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm font-medium text-gray-300 hover:text-white cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-6 9 6v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Home
+          </li>
+          <li class="flex items-center gap-3 text-sm font-medium text-gray-400 hover:text-white cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13"/></svg>
+            Your Library
+          </li>
+        </ul>
+
+        <div class="mt-6 pt-6 border-t border-[#2a2a2a] text-sm text-gray-400 overflow-auto h-44">
+          <ul class="space-y-2">
+            <li class="hover:text-white cursor-pointer">Liked Songs</li>
+            <li class="hover:text-white cursor-pointer">Daily Mix 1</li>
+            <li class="hover:text-white cursor-pointer">Chill Hits</li>
+            <li class="hover:text-white cursor-pointer">Top 50 — Global</li>
+            <li class="hover:text-white cursor-pointer">Discover Weekly</li>
+            <li class="hover:text-white cursor-pointer">My Playlist #1</li>
+            <li class="hover:text-white cursor-pointer">My Playlist #2</li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="mt-auto">
+        <button class="w-full py-2 rounded-full bg-white text-black font-semibold hover:opacity-90">Upgrade</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-8 overflow-auto">
+      <!-- top bar -->
+      <header class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <button class="p-2 rounded-full bg-white/6 hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button class="p-2 rounded-full bg-white/6 hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="ml-6 relative">
+            <input type="search" placeholder="Search" class="w-96 bg-[#121212] border border-[#2b2b2b] rounded-md py-2 px-3 text-sm placeholder-gray-400 focus:outline-none" />
+            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs">⌘K</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button class="text-sm px-3 py-1 border border-[#2b2b2b] rounded">Install App</button>
+          <div class="flex items-center gap-2">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=64&auto=format&fit=crop&crop=faces" alt="avatar" class="w-8 h-8 rounded-full" />
+            <span class="text-sm">Mayank</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- hero section -->
+      <section class="mt-8 grid grid-cols-1 gap-6">
+        <div class="rounded-lg p-6 bg-gradient-to-r from-[#450af5] via-[#1DB954]/10 to-[#1DB954]/40 backdrop-blur-sm flex items-center gap-6">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=200&auto=format&fit=crop" alt="featured" class="w-36 h-36 rounded shadow-lg object-cover" />
+          <div>
+            <p class="text-sm uppercase tracking-wide text-gray-200">Good evening</p>
+            <h2 class="text-3xl font-bold mt-2">Welcome back</h2>
+            <p class="mt-2 text-gray-300 max-w-xl">Your personalized mixes, recent plays and suggestions — all in one place.</p>
+            <div class="mt-4 flex gap-3">
+              <button class="px-4 py-2 rounded bg-white text-black font-semibold">Play</button>
+              <button class="px-4 py-2 rounded border border-white/20 text-white">Shuffle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- quick picks grid -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Made for you</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <!-- card -->
+            <div class="bg-white/5 rounded p-4 flex items-center gap-3 hover:bg-white/8 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-500 rounded flex items-center justify-center font-bold">DM</div>
+              <div>
+                <div class="font-semibold">Daily Mix</div>
+                <div class="text-xs text-gray-400">Various Artists</div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 rounded p-4 flex items-center gap-3 hover:bg-white/8 cursor-pointer">
+              <img src="https://images.unsplash.com/photo-1526178611063-6c6b3f1b54f0?q=80&w=100&auto=format&fit=crop" class="w-16 h-16 object-cover rounded" />
+              <div>
+                <div class="font-semibold">Chill Hits</div>
+                <div class="text-xs text-gray-400">Pop · 50 songs</div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 rounded p-4 flex items-center gap-3 hover:bg-white/8 cursor-pointer">
+              <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-red-400 rounded flex items-center justify-center font-bold">TH</div>
+              <div>
+                <div class="font-semibold">Top Hits</div>
+                <div class="text-xs text-gray-400">Top 50</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recently played horizontal scroll -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Recently Played</h3>
+          <div class="flex gap-4 overflow-x-auto pb-4">
+            <div class="min-w-[200px] bg-white/5 rounded p-3">
+              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=400&auto=format&fit=crop" class="w-full h-36 object-cover rounded" />
+              <h4 class="mt-3 font-semibold">Song Title — Artist</h4>
+              <p class="text-xs text-gray-400">Album • 2024</p>
+            </div>
+            <div class="min-w-[200px] bg-white/5 rounded p-3">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=400&auto=format&fit=crop" class="w-full h-36 object-cover rounded" />
+              <h4 class="mt-3 font-semibold">Another Song — Artist</h4>
+              <p class="text-xs text-gray-400">Single • 2023</p>
+            </div>
+            <div class="min-w-[200px] bg-white/5 rounded p-3">
+              <img src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=400&auto=format&fit=crop" class="w-full h-36 object-cover rounded" />
+              <h4 class="mt-3 font-semibold">Classic — Artist</h4>
+              <p class="text-xs text-gray-400">Album • 2018</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- Now playing / footer bar -->
+  <div class="fixed bottom-0 left-0 right-0 bg-[#181818] border-t border-[#262626] p-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3 w-1/3">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=64&auto=format&fit=crop" class="w-12 h-12 object-cover rounded" />
+        <div>
+          <div class="font-semibold">Song Title</div>
+          <div class="text-xs text-gray-400">Artist • Album</div>
+        </div>
+        <button class="ml-4 p-2 rounded-full hover:bg-white/6"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M9 4.5a.5.5 0 01.832-.374l6 5.5a.5.5 0 010 .748l-6 5.5A.5.5 0 019 15.5V4.5z"/></svg></button>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 w-1/3">
+        <div class="flex items-center gap-4">
+          <button class="p-2 rounded-full hover:bg-white/6"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4v4H3z"/></svg></button>
+          <button class="p-2 rounded-full bg-white text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M6 4.5v11L14 10 6 4.5z"/></svg></button>
+          <button class="p-2 rounded-full hover:bg-white/6"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12H3"/></svg></button>
+        </div>
+        <input type="range" min="0" max="100" class="w-96" />
+      </div>
+
+      <div class="flex items-center gap-4 justify-end w-1/3">
+        <button class="p-2 rounded-full hover:bg-white/6">🔁</button>
+        <button class="p-2 rounded-full hover:bg-white/6">🔀</button>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h3a1 1 0 110 2H3a1 1 0 01-1-1zM9 11a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"/></svg>
+          <input type="range" min="0" max="100" class="w-28" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="https://open.spotify.com/track/0tE7G1E9Mc2Eo5ZUIfKQbo?si=6f525a3f7fee496d" alt="">
+
+</body>
+</html>

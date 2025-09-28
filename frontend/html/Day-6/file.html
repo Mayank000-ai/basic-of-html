@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Clone - Tailwind CSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col">
+
+  <!-- Main Container -->
+  <div class="flex flex-1">
+
+    <!-- Activity Bar (Sidebar Left) -->
+    <div class="bg-slate-800 w-[5%] flex flex-col justify-between">
+      <div>
+        <ul class="p-5 flex flex-col gap-10 text-xl">
+          <li><i class="text-white fa-solid fa-file"></i></li>
+          <li><i class="text-white fa-solid fa-search"></i></li>
+          <li><i class="text-white fa-brands fa-github"></i></li>
+          <li><i class="text-white fa-brands fa-python"></i></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="p-5 flex flex-col gap-10 text-xl">
+          <li><i class="text-white fa-solid fa-gear"></i></li>
+          <li><i class="text-white fa-regular fa-user-circle"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Explorer Panel -->
+    <div class="bg-slate-700 w-[20%] flex flex-col">
+      <!-- Explorer Header -->
+      <div class="flex justify-between p-3 text-white border-b border-slate-600">
+        <div>Explorer</div>
+        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+      </div>
+
+      <!-- Folders -->
+      <div class="p-3 text-white flex-1">
+        <ul class="space-y-2">
+          <li>> <i class="fa-solid fa-folder"></i> Day01
+            <ul></ul>
+          </li>
+          <li>> <i class="fa-solid fa-folder"></i> Day02</li>
+          <li>> <i class="fa-solid fa-folder"></i> Day03</li>
+        </ul>
+        <div class="mt-5">
+          <ul class="space-y-2">
+            <li>> <i class="fa-solid fa-folder"></i> Outline</li>
+            <li>> <i class="fa-solid fa-folder"></i> Timeline</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editor Section -->
+    <div class="bg-slate-800 w-[75%] flex flex-col">
+      <!-- Tabs Bar -->
+      <div class="flex bg-slate-900 text-sm text-white">
+        <div class="px-4 py-2 bg-slate-700 border-b-2 border-blue-500">index.html</div>
+        <div class="px-4 py-2 hover:bg-slate-700 cursor-pointer">style.css</div>
+        <div class="px-4 py-2 hover:bg-slate-700 cursor-pointer">app.js</div>
+      </div>
+
+      <!-- Code Editor -->
+      <div class="flex-1 bg-slate-800 p-4 overflow-auto text-sm font-mono text-white">
+        <p class="text-gray-400">&lt;!DOCTYPE html&gt;</p>
+        <p class="text-blue-400">&lt;html&gt;</p>
+        <p class="ml-4 text-blue-400">&lt;head&gt;</p>
+        <p class="ml-8 text-green-400">&lt;title&gt;VS Code Clone&lt;/title&gt;</p>
+        <p class="ml-4 text-blue-400">&lt;/head&gt;</p>
+        <p class="ml-4 text-blue-400">&lt;body&gt;</p>
+        <p class="ml-8 text-yellow-300">Hello World 🚀</p>
+        <p class="ml-4 text-blue-400">&lt;/body&gt;</p>
+        <p class="text-blue-400">&lt;/html&gt;</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="bg-slate-900 h-6 text-xs text-gray-300 flex items-center justify-between px-4">
+    <span class="text-green-400"><i class="fa-solid fa-check"></i> Ready</span>
+    <span>UTF-8 | HTML | Spaces: 2 | Ln 12, Col 5</span>
+  </div>
+
+</body>
+</html>

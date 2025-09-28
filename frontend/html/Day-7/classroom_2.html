@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Classroom Clone — Tailwind</title>
+  <!-- Tailwind Play CDN (good for prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small visual tweak to mimic the floating avatar on cards */
+    .card-header { height: 120px; }
+    .avatar-overlap { transform: translateY(50%); }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 font-sans text-gray-800">
+  <div class="flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r border-gray-200 min-h-screen sticky top-0">
+      <div class="p-4 border-b">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-green-600 rounded flex items-center justify-center text-white font-semibold">C</div>
+          <h1 class="text-xl font-semibold">Classroom</h1>
+        </div>
+      </div>
+
+      <nav class="p-4">
+        <ul class="space-y-1 text-sm">
+          <li class="flex items-center gap-3 px-3 py-2 rounded bg-blue-50 text-blue-700">
+            <!-- icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/></svg>
+            Home
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100"> 
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V8H3v11a2 2 0 002 2z"/></svg>
+            Calendar
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">To do</li>
+        </ul>
+
+        <div class="mt-6 text-xs text-gray-500 font-semibold">Enrolled</div>
+        <ul class="mt-2 space-y-2">
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">
+            <div class="w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center">R</div>
+            <div class="text-sm">JAVA BATCH - A2</div>
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">
+            <div class="w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center">R</div>
+            <div class="text-sm">Frontend BATCH - G / H</div>
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">
+            <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center">L</div>
+            <div class="text-sm">LINUX / GIT - 1</div>
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">
+            <div class="w-8 h-8 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center">C</div>
+            <div class="text-sm">C LOGICAL BATCH - A 41</div>
+          </li>
+
+          <li class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100">
+            <div class="w-8 h-8 rounded-full bg-green-100 text-orange-600 flex items-center justify-center">D</div>
+            <div class="text-sm">OPPS AUG-2023</div>
+          </li>
+        </ul>
+
+        <div class="mt-6">
+          <button class="w-full text-left px-3 py-2 rounded hover:bg-gray-100">Archived classes</button>
+          <button class="w-full text-left px-3 py-2 rounded hover:bg-gray-100">Settings</button>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-6">
+      <!-- Banner -->
+      <div class="mb-6">
+        <div class="rounded-xl bg-blue-50 p-6">
+          <div class="flex items-start justify-between">
+            <div>
+              <h2 class="text-xl font-semibold">Participate in research to improve Classroom</h2>
+              <p class="text-sm text-gray-600 mt-1">Help shape the future of educational technology by sharing your expertise.</p>
+            </div>
+            <button class="text-blue-700 underline">Learn more</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-gray-700 to-gray-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">JAVA BATCH - A2</h3>
+              <div class="text-xs opacity-90">REGex Software</div>
+            </div>
+
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-600 font-bold border-4 border-white avatar-overlap">R</div>
+            </div>
+          </div>
+
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18"/></svg>
+              Classwork
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-green-500 to-green-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">Frontend BATCH - G / H</h3>
+              <div class="text-xs opacity-90">https://meet.google.com/osx-...</div>
+            </div>
+
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-600 font-bold border-4 border-white avatar-overlap">R</div>
+            </div>
+          </div>
+
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">Classwork</div>
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-blue-500 to-blue-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">LINUX / GIT - 1</h3>
+              <div class="text-xs opacity-90">REGex Software</div>
+            </div>
+
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-600 font-bold border-4 border-white avatar-overlap">R</div>
+            </div>
+          </div>
+
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">Classwork</div>
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-gray-700 to-gray-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">C LOGICAL BATCH - A...</h3>
+              <div class="text-xs opacity-90">REGex Software</div>
+            </div>
+
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-green-600 font-bold border-4 border-white avatar-overlap">R</div>
+            </div>
+          </div>
+
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">Classwork</div>
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="bg-white rounded-lg shadow-sm border overflow-hidden">
+          <div class="relative card-header p-4 flex items-end bg-gradient-to-r from-green-500 to-green-600">
+            <div class="text-white">
+              <h3 class="text-lg font-semibold leading-tight">OPPS AUG-2023</h3>
+              <div class="text-xs opacity-90">2CSEB — Dr.Gaurav Sharma</div>
+            </div>
+
+            <div class="absolute right-4 -bottom-6">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-orange-500 font-bold border-4 border-white avatar-overlap">D</div>
+            </div>
+          </div>
+
+          <div class="p-4 pt-8 min-h-[100px]"></div>
+
+          <div class="border-t px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center gap-3 text-sm text-gray-500">Classwork</div>
+            <div class="flex items-center gap-2">
+              <button class="p-2 rounded hover:bg-gray-100">📷</button>
+              <button class="p-2 rounded hover:bg-gray-100">📁</button>
+              <button class="p-2 rounded hover:bg-gray-100">•••</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
